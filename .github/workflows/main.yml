@@ -29,7 +29,8 @@ jobs:
         pip install flet
 
     - name: 5. Compilar APK
-      run: flet build apk --verbose
+      # Añadimos --icon para decirle qué imagen usar
+      run: flet build apk --icon assets/icon.png --verbose
 
     - name: 6. Subir APK
       uses: actions/upload-artifact@v4
