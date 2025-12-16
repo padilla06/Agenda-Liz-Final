@@ -28,12 +28,14 @@ jobs:
         pip install -r requirements.txt
         pip install flet
 
-    - name: 5. Compilar APK
-      # Añadimos --icon para decirle qué imagen usar
+    - name: 5. Compilar APK con Icono
+      # Aquí le decimos que use tu imagen icon.png
       run: flet build apk --icon assets/icon.png --verbose
 
-    - name: 6. Subir APK
+    - name: 6. Subir APK Final
       uses: actions/upload-artifact@v4
       with:
         name: AgendaLiz-App
+        # Los asteriscos ** arreglan el error de "No files found"
         path: "**/*.apk"
+        
