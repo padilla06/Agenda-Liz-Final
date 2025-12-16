@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: AgendaLiz-App
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: "**/*.apk"
